@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contextual Emotion Detection in Text - Documentation</title>
+    <link rel="stylesheet" href="./diss_final.css" type="text/css" />
+  </head>
+  <body>
+    <div class="container-header">
+      <div class="header-diss">
+        <h1>Contextual Emotion Detection in Text - Documentation</h1>
+      </div>
+    </div>
+    <div class="container-modules">
+      <p id="modules">MODULES :</p>
+      <p>•emoji</p>
+      <p>•io</p>
+      <p>•re</p>
+      <p>•math</p>
+      <p>•numpy</p>
+      <p>•matplotlib.pyplot</p>
+    </div>
+
+    <div class="global-variables">
+      <button type="button" class="global-variable">
+        Global Variables (Click To Expand)
+      </button>
+      <div class="content">
+        <p id="first-p"><b>ALL_LETTERS</b> = 'abcdefghijklmnopqrstuvwxyz'</p>
+        <p><b>DEV_DATA_PATH </b>= '../Data/devwithoutlabels.txt'</p>
+        <p>
+          <b>DIRECTORIES</b>= {'features': 'features/', 'weights': 'weights/'}
+        </p>
+        <p><b>EMBEDDING_DIM </b>100</p>
+        <p><b>EMOTICONS_START </b>= [':', ';', '<', '=']</p>
+        <p>
+          <b>EMOTION2LABEL </b>= {'angry': 3, 'happy': 1, 'others': 0, 'sad': 2}
+        </p>
+        <p>
+          <b>FEATURES </b>= {'Bag_of_Words': 'bow.npy', 'TF_IDF': 'tf_idf.npy',
+          'word2vec': 'w2v_embeddings.npy'}
+        </p>
+        <p><b>IGNORE_LIST </b> = ['a', 'the', 'is']</p>
+        <p>
+          <b>LABEL2EMOTION </b> = {0: 'others', 1: 'happy', 2: 'sad', 3:
+          'angry'}
+        </p>
+        <p><b>MAX_BOW_VALUE </b>4</p>
+        <p><b>MAX_SENTENCE_LEN </b>40</p>
+        <p><b>MINIMUM_IMPROVEMENT </b>0.001</p>
+        <p><b>NUM_BATCHES </b>100</p>
+        <p><b>OUTPUT_BOW_AND_TEST </b> '../Data/test_and_bow.txt'</p>
+        <p><b>OUTPUT_BOW_AND_TRAIN </b> '../Data/train_and_bow.txt'</p>
+        <p><b>TOTAL_CLASSES </b>4</p>
+        <p><b>TRAIN_DATA_PATH </b>= '../Data/train.txt'</p>
+        <p><b>UNKNOWN_WORD </b> = 'word_not_found'</p>
+        <p><b>all_words_dict </b> = {}</p>
+        <p><b>classification_results </b> = []</p>
+        <p><b>embedding_model </b> = "</p>
+        <p><b>embedding_words </b>= []</p>
+        <p><b>inverse_document_frequency </b> = {}</p>
+        <p><b>saved_pre </b> = {}</p>
+        <p><b>validation_errors </b> = []</p>
+        <p id="last-p"><b>word_to_index </b> = {}</p>
+      </div>
+    </div>
+    <div class="the-rest">
+        <div class="title">
+            <h1>Functions</h1>
+        </div>
+      <div class="function-box-model">
+        <div class="inner-box-function">
+          <div class="actual-function">
+            <p>
+            </td><dl><dt><a name="-bags_of_words_to_bow_neural_network_feature"><strong>bags_of_words_to_bow_neural_network_feature</strong></a>(data_set)</dt><dd><tt>Transforms&nbsp;the&nbsp;data&nbsp;set&nbsp;into&nbsp;the&nbsp;corresponding&nbsp;nn-friendly&nbsp;np&nbsp;array&nbsp;as&nbsp;BoW.</tt></dd></dl>
+        </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="function-box-model">
+        <div class="inner-box-function">
+          <div class="actual-function">
+            <p>
+              <strong>bags_of_words_to_bow_neural_network_feature</strong></a>(data_set)</dt><dd><tt>Transforms&nbsp;the&nbsp;data&nbsp;set&nbsp;into&nbsp;the&nbsp;corresponding&nbsp;nn-friendly&nbsp;np&nbsp;array&nbsp;as&nbsp;BoW.</tt></dd>
+            </p>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="function-box-model">
+      <div class="inner-box-function">
+        <div class="actual-function">
+          <p>
+            <strong>bags_of_words_to_tf_idf_neural_network_feature</strong></a>(data_set)</dt><dd><tt>Transforms&nbsp;the&nbsp;data&nbsp;set&nbsp;into&nbsp;the&nbsp;corresponding&nbsp;nn-friendly&nbsp;np&nbsp;array&nbsp;as&nbsp;TF_IDF</tt></dd>
+          </p>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="function-box-model">
+    <div class="inner-box-function">
+      <div class="actual-function">
+        <p>
+          <strong>bow_to_neural_network_bow</strong></a>(bag_of_words)</dt><dd><tt>Uses&nbsp;the&nbsp;bow&nbsp;and&nbsp;word&nbsp;to&nbsp;index&nbsp;dictionary&nbsp;to&nbsp;create&nbsp;nn&nbsp;friendly&nbsp;features.</tt></dd>
+        </p>  
+      </div>
+    </div>
+  </div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>bow_to_neural_network_tf_idf</strong></a>(bag_of_words)</dt><dd><tt>Uses&nbsp;the&nbsp;bow&nbsp;and&nbsp;word&nbsp;to&nbsp;index&nbsp;dictionary&nbsp;to&nbsp;create&nbsp;nn&nbsp;friendly&nbsp;features.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>change_labels_into_neural_network_friendly</strong></a>(labels, number_of_classes)</dt><dd><tt>Changes&nbsp;the&nbsp;shape&nbsp;of&nbsp;labels&nbsp;into&nbsp;a&nbsp;neural&nbsp;network&nbsp;friendly&nbsp;form.&nbsp;ex:&nbsp;(0,0,1,0)<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;labels&nbsp;:&nbsp;the&nbsp;labels&nbsp;of&nbsp;the&nbsp;data_set.<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;labels&nbsp;in&nbsp;a&nbsp;n-n&nbsp;friendly-form.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>classify_unseen_data_flat</strong></a>(weights, bias_weights, test_data_path, feature_type, activation_function)</dt><dd><tt>Classifies&nbsp;unseen&nbsp;data&nbsp;using&nbsp;a&nbsp;flat&nbsp;model&nbsp;with&nbsp;the&nbsp;weights&nbsp;and&nbsp;biases&nbsp;and&nbsp;misc.&nbsp;provided</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>classify_unseen_data_hier</strong></a>(weights_list, bias_weights_list, test_data_path, feature_type, activation_function_list)</dt><dd><tt>Classifies&nbsp;unseen&nbsp;data&nbsp;using&nbsp;a&nbsp;hier&nbsp;with&nbsp;the&nbsp;weights&nbsp;and&nbsp;biases&nbsp;provided&nbsp;and&nbsp;misc.&nbsp;provided</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>classify_with_ff_backprop_nn_dynamic</strong></a>(test_features, test_labels, weights, bias_weights, num_of_classes, activation)</dt><dd><tt>Classifies&nbsp;the&nbsp;data&nbsp;using&nbsp;the&nbsp;weights&nbsp;and&nbsp;bias&nbsp;weights&nbsp;trained.<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;test_features&nbsp;the&nbsp;test&nbsp;data&nbsp;we&nbsp;want&nbsp;to&nbsp;classify.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;test_labels:&nbsp;the&nbsp;correct&nbsp;labels&nbsp;for&nbsp;the&nbsp;test&nbsp;data.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;weights:&nbsp;the&nbsp;weights&nbsp;of&nbsp;the&nbsp;trained&nbsp;neural&nbsp;network.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;bias_weights:&nbsp;the&nbsp;weights&nbsp;of&nbsp;the&nbsp;trained&nbsp;neural&nbsp;network.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;num_of_classes:&nbsp;the&nbsp;number&nbsp;of&nbsp;classes&nbsp;we&nbsp;are&nbsp;classifying&nbsp;for.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;activation:&nbsp;The&nbsp;activation&nbsp;function&nbsp;to&nbsp;use&nbsp;"sigmoid"&nbsp;or&nbsp;"relu".<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;prints&nbsp;to&nbsp;the&nbsp;console&nbsp;the&nbsp;macro_f1,&nbsp;confusion_matrix&nbsp;and&nbsp;accuracy.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;the&nbsp;cross&nbsp;entropy&nbsp;loss.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>classify_with_ff_backprop_nn_dynamic_hierarchical</strong></a>(test_features_first_layer, test_features_second_layer, test_labels, weights_list, bias_weights_list, activation_list)</dt><dd><tt>Classifies&nbsp;the&nbsp;data&nbsp;using&nbsp;the&nbsp;weights&nbsp;and&nbsp;bias&nbsp;weights&nbsp;trained&nbsp;through&nbsp;our&nbsp;2&nbsp;classifiers.<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;test_features_first_layer:&nbsp;the&nbsp;test&nbsp;data&nbsp;we&nbsp;want&nbsp;to&nbsp;classify&nbsp;in&nbsp;the&nbsp;feature&nbsp;form&nbsp;of&nbsp;the&nbsp;first&nbsp;layer.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;test_features_second_layer:&nbsp;the&nbsp;test&nbsp;data&nbsp;we&nbsp;want&nbsp;to&nbsp;classify&nbsp;in&nbsp;the&nbsp;feature&nbsp;form&nbsp;of&nbsp;the&nbsp;first&nbsp;layer.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;test_labels:&nbsp;the&nbsp;correct&nbsp;labels&nbsp;for&nbsp;the&nbsp;test&nbsp;data.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;weights_list:&nbsp;The&nbsp;weights&nbsp;of&nbsp;our&nbsp;2&nbsp;trained&nbsp;neural&nbsp;networks.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;bias_weights_list:&nbsp;The&nbsp;bias&nbsp;of&nbsp;our&nbsp;2&nbsp;trained&nbsp;neural&nbsp;networks.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;activation_list:&nbsp;The&nbsp;activation&nbsp;function&nbsp;to&nbsp;use&nbsp;on&nbsp;each&nbsp;classifier.<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;prints&nbsp;to&nbsp;the&nbsp;console&nbsp;the&nbsp;macro_f1,&nbsp;confusion_matrix&nbsp;and&nbsp;accuracy.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;the&nbsp;cross&nbsp;entropy&nbsp;loss.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>compare_data_set_changes</strong></a>(text, bow, output_file)</dt><dd><tt>Prints&nbsp;the&nbsp;original&nbsp;data&nbsp;set&nbsp;and&nbsp;the&nbsp;Bow&nbsp;representation&nbsp;to&nbsp;a&nbsp;file.<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;text&nbsp;:&nbsp;The&nbsp;original&nbsp;list&nbsp;of&nbsp;texts.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;bow:&nbsp;A&nbsp;dictionary&nbsp;of&nbsp;index&nbsp;to&nbsp;Bag&nbsp;of&nbsp;Words&nbsp;representation.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;output_file&nbsp;:&nbsp;The&nbsp;file&nbsp;we&nbsp;want&nbsp;to&nbsp;output&nbsp;at.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>correction</strong></a>(word)</dt><dd><tt>Most&nbsp;probable&nbsp;spelling&nbsp;correction&nbsp;for&nbsp;word.<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;word:&nbsp;The&nbsp;word&nbsp;we&nbsp;are&nbsp;looking&nbsp;to&nbsp;correct.<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;word&nbsp;correct&nbsp;or&nbsp;the&nbsp;word&nbsp;itself.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>count_minimum_class</strong></a>(full_labels, number_of_classes)</dt><dd><tt>Given&nbsp;a&nbsp;list&nbsp;of&nbsp;labels,&nbsp;finds&nbsp;the&nbsp;cardinality&nbsp;of&nbsp;the&nbsp;class&nbsp;with&nbsp;least&nbsp;labels.<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;full_labels&nbsp;:&nbsp;The&nbsp;labels&nbsp;of&nbsp;the&nbsp;data&nbsp;set<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;cardinality&nbsp;of&nbsp;the&nbsp;class&nbsp;with&nbsp;the&nbsp;least&nbsp;occurences.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>create_embedding_model</strong></a>(train_conv)</dt><dd><tt>Given&nbsp;the&nbsp;conversations&nbsp;of&nbsp;the&nbsp;training&nbsp;set,&nbsp;creates&nbsp;a&nbsp;word&nbsp;embedder.<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;train_conv&nbsp;:&nbsp;conversations&nbsp;of&nbsp;the&nbsp;training&nbsp;set<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Generates&nbsp;the&nbsp;word&nbsp;embedder&nbsp;of&nbsp;word2vec&nbsp;and&nbsp;the&nbsp;words&nbsp;of&nbsp;the&nbsp;model&nbsp;stored&nbsp;in&nbsp;a&nbsp;global&nbsp;variable.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        strong>create_list_of_bag_of_words</strong></a>(data_set)</dt><dd><tt>Makes&nbsp;the&nbsp;data&nbsp;set&nbsp;into&nbsp;Bag&nbsp;of&nbsp;Words&nbsp;representation.&nbsp;Limits&nbsp;to&nbsp;5&nbsp;of&nbsp;each<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;data_set&nbsp;:&nbsp;The&nbsp;data&nbsp;we&nbsp;would&nbsp;like&nbsp;to&nbsp;make&nbsp;to&nbsp;Bag&nbsp;of&nbsp;Words.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;mode&nbsp;:&nbsp;Whether&nbsp;this&nbsp;is&nbsp;part&nbsp;of&nbsp;the&nbsp;training&nbsp;or&nbsp;test&nbsp;data.<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;data_bow&nbsp;:&nbsp;A&nbsp;dictionary&nbsp;of&nbsp;index&nbsp;to&nbsp;Bag&nbsp;of&nbsp;Words&nbsp;representation.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>create_w2v_embedding_for_sentence</strong></a>(sentence)</dt><dd><tt>Creates&nbsp;the&nbsp;embeddings&nbsp;for&nbsp;the&nbsp;sentence.<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;embedding_model&nbsp;:&nbsp;The&nbsp;model&nbsp;that&nbsp;creates&nbsp;the&nbsp;word&nbsp;embeddings.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;sentence:&nbsp;the&nbsp;sentence&nbsp;to&nbsp;create&nbsp;the&nbsp;embedding.<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;embedding&nbsp;of&nbsp;the&nbsp;sentence&nbsp;(4000&nbsp;floats,&nbsp;0s&nbsp;for&nbsp;less&nbsp;than&nbsp;40&nbsp;words).</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>create_w2v_embeddings_for_data_set</strong></a>(data_set)</dt><dd><tt>Creates&nbsp;the&nbsp;embeddings&nbsp;of&nbsp;the&nbsp;data_set&nbsp;based&nbsp;on&nbsp;the&nbsp;embedding_model.<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;data_set&nbsp;:&nbsp;The&nbsp;data_set&nbsp;we&nbsp;want&nbsp;to&nbsp;create&nbsp;the&nbsp;embeddings&nbsp;for<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;corresponding&nbsp;embeddings&nbsp;for&nbsp;the&nbsp;data-set.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>edits1</strong></a>(word)</dt><dd><tt>All&nbsp;edits&nbsp;that&nbsp;are&nbsp;one&nbsp;edit&nbsp;away&nbsp;from&nbsp;`word`.<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;words:&nbsp;the&nbsp;word&nbsp;to&nbsp;find&nbsp;edits&nbsp;of<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;set&nbsp;of&nbsp;edits&nbsp;of&nbsp;that&nbsp;word.</tt></dd></dl>
+           <dl><dt><a name="-edits2"><strong>edits2</strong></a>(word)</dt><dd><tt>All&nbsp;edits&nbsp;that&nbsp;are&nbsp;two&nbsp;edits&nbsp;away&nbsp;from&nbsp;`word`.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>edits2</strong></a>(word)</dt><dd><tt>All&nbsp;edits&nbsp;that&nbsp;are&nbsp;two&nbsp;edits&nbsp;away&nbsp;from&nbsp;`word`.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>extract_test_or_val_set</strong></a>(conversations, labels, number_of_classes=4)</dt><dd><tt>Splits&nbsp;the&nbsp;training&nbsp;data_set&nbsp;into&nbsp;train&nbsp;and&nbsp;val&nbsp;or&nbsp;test&nbsp;set&nbsp;keeping&nbsp;the&nbsp;equal&nbsp;class&nbsp;distribution.<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;conversations:&nbsp;The&nbsp;data's&nbsp;conversations<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;labels:&nbsp;The&nbsp;data's&nbsp;labels<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;number_of_classes:&nbsp;The&nbsp;number&nbsp;of&nbsp;classes&nbsp;we&nbsp;split&nbsp;for<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;train_data:&nbsp;The&nbsp;training&nbsp;conversations<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;train_labels:&nbsp;The&nbsp;training&nbsp;labels<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;test_data:&nbsp;The&nbsp;test/val&nbsp;conversations<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;test_labels:&nbsp;The&nbsp;test/val&nbsp;labels</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>generate_initial_test_set</strong></a>(feature_type, run_name)</dt><dd><tt>Generates&nbsp;the&nbsp;test&nbsp;set&nbsp;of&nbsp;the&nbsp;specific&nbsp;feature&nbsp;type&nbsp;based&nbsp;on&nbsp;the&nbsp;initial&nbsp;input.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>generate_initial_test_set_single_layer</strong></a>(feature_type, run_name, two_class)</dt><dd><tt>Generates&nbsp;the&nbsp;test&nbsp;set&nbsp;of&nbsp;the&nbsp;specific&nbsp;feature&nbsp;type&nbsp;based&nbsp;on&nbsp;the&nbsp;initial&nbsp;input&nbsp;For&nbsp;1&nbsp;layer&nbsp;of&nbsp;Hier.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>generate_inverse_document_frequency</strong></a>(total_train_samples)</dt><dd><tt>Populates&nbsp;the&nbsp;inverse&nbsp;document&nbsp;frequency&nbsp;dictionary.<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;data_set:&nbsp;The&nbsp;total&nbsp;number&nbsp;of&nbsp;train&nbsp;samples</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>get_equal_class_sample</strong></a>(full_train, full_labels, number_of_classes)</dt><dd><tt>Given&nbsp;the&nbsp;training&nbsp;data&nbsp;and&nbsp;labels,&nbsp;returns&nbsp;the&nbsp;data&nbsp;sampled&nbsp;with&nbsp;equally&nbsp;distributed&nbsp;classes<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;full_train:&nbsp;The&nbsp;data's&nbsp;conversations<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;full_labels:&nbsp;The&nbsp;data's&nbsp;labels<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;sample_train:&nbsp;The&nbsp;new&nbsp;sample&nbsp;train&nbsp;data<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;sample_labels:&nbsp;The&nbsp;new&nbsp;sample&nbsp;labels</tt></dd></dl>
+           <dl><dt><a name="-input_data"><strong>input_data</strong></a>(feature_type, run_name, existing, sample, overwrite, two_class, hierarchical, initial)</dt><dd><tt>Load&nbsp;the&nbsp;neural&nbsp;network&nbsp;features,&nbsp;either&nbsp;from&nbsp;an&nbsp;existing&nbsp;save&nbsp;or&nbsp;generates&nbsp;them.<br>
+          <strong><strong><strong>Input:</strong></strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;feature_type&nbsp;:&nbsp;What&nbsp;neural&nbsp;network&nbsp;features&nbsp;we&nbsp;will&nbsp;use.&nbsp;(Bag&nbsp;of&nbsp;Words,&nbsp;Word2vec).<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;existing&nbsp;:&nbsp;A&nbsp;boolean&nbsp;showing&nbsp;whether&nbsp;to&nbsp;use&nbsp;existing&nbsp;from&nbsp;a&nbsp;file&nbsp;or&nbsp;not.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;sample&nbsp;:&nbsp;A&nbsp;boolean&nbsp;that&nbsp;shows&nbsp;whether&nbsp;we&nbsp;want&nbsp;our&nbsp;data&nbsp;to&nbsp;be&nbsp;sampled&nbsp;or&nbsp;not.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;overwrite:&nbsp;A&nbsp;boolean&nbsp;that&nbsp;shows&nbsp;if&nbsp;we&nbsp;generated&nbsp;the&nbsp;features,&nbsp;whether&nbsp;to&nbsp;save&nbsp;them&nbsp;for&nbsp;future&nbsp;use.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;two_class:&nbsp;Whether&nbsp;we&nbsp;are&nbsp;inputting&nbsp;data&nbsp;for&nbsp;a&nbsp;two_class&nbsp;classifier<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;hierarchical:&nbsp;Whether&nbsp;this&nbsp;is&nbsp;for&nbsp;the&nbsp;hierarchical&nbsp;classifier.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;initial:&nbsp;Whether&nbsp;this&nbsp;is&nbsp;the&nbsp;initial&nbsp;run,&nbsp;where&nbsp;we&nbsp;only&nbsp;save&nbsp;the&nbsp;test&nbsp;set.<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;train_feat&nbsp;:&nbsp;The&nbsp;neural&nbsp;network&nbsp;features&nbsp;for&nbsp;the&nbsp;training&nbsp;data.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;train_labels&nbsp;:&nbsp;The&nbsp;neural&nbsp;network&nbsp;labels&nbsp;for&nbsp;the&nbsp;training&nbsp;data.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;val_feat&nbsp;:&nbsp;The&nbsp;neural&nbsp;network&nbsp;features&nbsp;for&nbsp;the&nbsp;validation&nbsp;data.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;val_labels&nbsp;:&nbsp;The&nbsp;neural&nbsp;network&nbsp;labels&nbsp;for&nbsp;the&nbsp;validation&nbsp;data.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;test_feat&nbsp;:&nbsp;The&nbsp;neural&nbsp;network&nbsp;features&nbsp;for&nbsp;the&nbsp;test&nbsp;data.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;test_labels&nbsp;:&nbsp;The&nbsp;neural&nbsp;network&nbsp;labels&nbsp;for&nbsp;the&nbsp;test&nbsp;data.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>known</strong></a>(words)</dt><dd><tt>The&nbsp;subset&nbsp;of&nbsp;`words`&nbsp;that&nbsp;appear&nbsp;in&nbsp;the&nbsp;dictionary&nbsp;of&nbsp;all_words_dict.<br>
+          <strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;words:&nbsp;the&nbsp;edited&nbsp;words.<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;set&nbsp;of&nbsp;words&nbsp;in&nbsp;all_words_dict.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>load_ff_backprop_training_results_dynamic</strong></a>(hidden_layers, extra)</dt><dd><tt>Loads&nbsp;the&nbsp;training&nbsp;results&nbsp;from&nbsp;npy&nbsp;files<br>
+          <strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;hidden_layers:&nbsp;The&nbsp;Number&nbsp;of&nbsp;layers&nbsp;of&nbsp;our&nbsp;trained&nbsp;network<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;weights&nbsp;and&nbsp;biases&nbsp;loaded&nbsp;from&nbsp;files.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>load_ff_backprop_training_results_dynamic</strong></a>(hidden_layers, extra)</dt><dd><tt>Loads&nbsp;the&nbsp;training&nbsp;results&nbsp;from&nbsp;npy&nbsp;files<br>
+          <strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;hidden_layers:&nbsp;The&nbsp;Number&nbsp;of&nbsp;layers&nbsp;of&nbsp;our&nbsp;trained&nbsp;network<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;weights&nbsp;and&nbsp;biases&nbsp;loaded&nbsp;from&nbsp;files.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>micro_f1</strong></a>(confusion_matrix)</dt><dd><tt>Calculates&nbsp;the&nbsp;micro-F1&nbsp;of&nbsp;the&nbsp;given&nbsp;confusion&nbsp;matrix.<br>
+          <strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;confusion_matrix:&nbsp;The&nbsp;output&nbsp;of&nbsp;our&nbsp;classifier&nbsp;as&nbsp;a&nbsp;confusion&nbsp;matrix.<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;micro_f1&nbsp;score.&nbsp;Prints&nbsp;precision&nbsp;and&nbsp;recall&nbsp;if&nbsp;required.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>perform_flat_classification</strong></a>(feature_type, run_name, activation_function, eta, epoch, layers_list)</dt><dd><tt>Trains&nbsp;and&nbsp;performs&nbsp;the&nbsp;flat&nbsp;classification&nbsp;for&nbsp;our&nbsp;data&nbsp;set.<br>
+          <strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;feature_type:&nbsp;The&nbsp;type&nbsp;of&nbsp;nn&nbsp;feature&nbsp;("word2vec",&nbsp;"Bag_of_Words",&nbsp;"TF_IDF")&nbsp;.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;run_name:&nbsp;The&nbsp;name&nbsp;given&nbsp;to&nbsp;the&nbsp;particular&nbsp;run.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;activation_function_list&nbsp;:&nbsp;The&nbsp;activation&nbsp;function&nbsp;for&nbsp;our&nbsp;classifier.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;eta:&nbsp;The&nbsp;learning&nbsp;rate&nbsp;of&nbsp;our&nbsp;classifier.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;epoch:&nbsp;The&nbsp;epoch&nbsp;of&nbsp;our&nbsp;classifer<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;layers_List:&nbsp;The&nbsp;list&nbsp;of&nbsp;number&nbsp;of&nbsp;neurons&nbsp;on&nbsp;our&nbsp;hidden&nbsp;layers<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;correct&nbsp;and&nbsp;cross&nbsp;entropy&nbsp;error.&nbsp;Print&nbsp;to&nbsp;console&nbsp;from&nbsp;other&nbsp;calls.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>perform_hierarchical_classification</strong></a>(feature_type, run_name, activation_function_list, eta_list, epoch_list, layers_list)</dt><dd><tt>Trains&nbsp;and&nbsp;performs&nbsp;the&nbsp;hierarchical&nbsp;classification&nbsp;for&nbsp;our&nbsp;data&nbsp;set.<br>
+          <strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;feature_type:&nbsp;A&nbsp;list&nbsp;of&nbsp;types&nbsp;of&nbsp;nn&nbsp;features&nbsp;("word2vec",&nbsp;"Bag_of_Words",&nbsp;"TF_IDF")&nbsp;.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;run_name:&nbsp;The&nbsp;name&nbsp;given&nbsp;to&nbsp;the&nbsp;particular&nbsp;run.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;activation_function_list&nbsp;:&nbsp;The&nbsp;activation&nbsp;function&nbsp;for&nbsp;each&nbsp;classifier&nbsp;in&nbsp;a&nbsp;list.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;eta_list:&nbsp;The&nbsp;learning&nbsp;rate&nbsp;of&nbsp;each&nbsp;classifier&nbsp;in&nbsp;a&nbsp;list.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;epoch_list:&nbsp;The&nbsp;epoch&nbsp;of&nbsp;each&nbsp;classifier&nbsp;in&nbsp;a&nbsp;list<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;layers_List:&nbsp;The&nbsp;neurons&nbsp;of&nbsp;Hidden&nbsp;L.&nbsp;of&nbsp;each&nbsp;classifier&nbsp;within&nbsp;a&nbsp;LIST&nbsp;of&nbsp;LISTS.<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;correct&nbsp;and&nbsp;cross&nbsp;entropy&nbsp;error.&nbsp;Print&nbsp;to&nbsp;console&nbsp;from&nbsp;other&nbsp;calls.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>perform_run_on_single_layer</strong></a>(feature_type, run_name, activation_function, eta, epoch, layers_list, top)</dt><dd><tt>Trains&nbsp;and&nbsp;tests&nbsp;a&nbsp;single&nbsp;layer&nbsp;of&nbsp;our&nbsp;hierarchical&nbsp;class.<br>
+          <strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;feature_type:&nbsp;The&nbsp;type&nbsp;of&nbsp;nn&nbsp;feature&nbsp;("word2vec",&nbsp;"Bag_of_Words",&nbsp;"TF_IDF")&nbsp;.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;run_name:&nbsp;The&nbsp;name&nbsp;given&nbsp;to&nbsp;the&nbsp;particular&nbsp;run.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;activation_function_list&nbsp;:&nbsp;The&nbsp;activation&nbsp;function&nbsp;for&nbsp;our&nbsp;classifier.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;eta:&nbsp;The&nbsp;learning&nbsp;rate&nbsp;of&nbsp;our&nbsp;classifier.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;epoch:&nbsp;The&nbsp;epoch&nbsp;of&nbsp;our&nbsp;classifer<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;layers_List:&nbsp;The&nbsp;list&nbsp;of&nbsp;number&nbsp;of&nbsp;neurons&nbsp;on&nbsp;our&nbsp;hidden&nbsp;layers<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;correct&nbsp;and&nbsp;cross&nbsp;entropy&nbsp;error.&nbsp;Print&nbsp;to&nbsp;console&nbsp;from&nbsp;other&nbsp;calls.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>plot_errors</strong></a>(errors)</dt><dd><tt>Plots&nbsp;the&nbsp;validation&nbsp;errors&nbsp;using&nbsp;pyplot.<br>
+          <strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;errors:&nbsp;the&nbsp;errors&nbsp;to&nbsp;plot.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>populate_all_words_dict</strong></a>(data_set)</dt><dd><tt>Populates&nbsp;the&nbsp;dictionary&nbsp;of&nbsp;all&nbsp;words&nbsp;counting&nbsp;the&nbsp;indexes&nbsp;of&nbsp;each&nbsp;occurence<br>
+          <strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;data_set:&nbsp;The&nbsp;data&nbsp;we&nbsp;are&nbsp;adding&nbsp;to&nbsp;our&nbsp;dictionary.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>populate_word_to_index_dictionary</strong></a>()</dt><dd><tt>Populates&nbsp;the&nbsp;word&nbsp;to&nbsp;index&nbsp;dictionary&nbsp;to&nbsp;be&nbsp;used&nbsp;for&nbsp;nn-features.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>pre_process_data</strong></a>(data_file_path, mode)</dt><dd><tt>Load&nbsp;data&nbsp;from&nbsp;a&nbsp;file,&nbsp;process&nbsp;and&nbsp;return&nbsp;indices,&nbsp;conversations&nbsp;and&nbsp;labels&nbsp;in&nbsp;separate&nbsp;lists.<br>
+          If&nbsp;already&nbsp;calculated,&nbsp;return&nbsp;them&nbsp;instead.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_file_path&nbsp;:&nbsp;Path&nbsp;to&nbsp;train/test&nbsp;file&nbsp;to&nbsp;be&nbsp;processed.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode&nbsp;:&nbsp;"train"&nbsp;mode&nbsp;returns&nbsp;labels.&nbsp;"test"&nbsp;mode&nbsp;doesn't&nbsp;return&nbsp;labels.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;indices&nbsp;:&nbsp;Unique&nbsp;conversation&nbsp;ID&nbsp;list.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conversations&nbsp;:&nbsp;List&nbsp;of&nbsp;3&nbsp;turn&nbsp;conversations,&nbsp;processed&nbsp;and&nbsp;each&nbsp;turn&nbsp;separated&nbsp;(removed&nbsp;&lt;eos&gt;&nbsp;tag&nbsp;for&nbsp;now).<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;labels&nbsp;:&nbsp;[Only&nbsp;available&nbsp;in&nbsp;"train"&nbsp;mode]&nbsp;List&nbsp;of&nbsp;labels.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>pre_process_unseen</strong></a>(feature_type, test_conversations)</dt><dd><tt>Pre_process&nbsp;unseen&nbsp;test&nbsp;data&nbsp;so&nbsp;that&nbsp;it&nbsp;can&nbsp;be&nbsp;classified&nbsp;with&nbsp;previous&nbsp;weights.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>remove_unknown_words</strong></a>(test_data, replace)</dt><dd><tt>Removes&nbsp;unknown&nbsp;words&nbsp;that&nbsp;cannot&nbsp;be&nbsp;corrected.&nbsp;Replaces&nbsp;if&nbsp;replace&nbsp;is&nbsp;true<br>
+          <strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;test_data&nbsp;:&nbsp;The&nbsp;test&nbsp;data&nbsp;we&nbsp;would&nbsp;like&nbsp;to&nbsp;remove&nbsp;the&nbsp;unknown&nbsp;words&nbsp;from.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;replace&nbsp;:&nbsp;Whether&nbsp;we&nbsp;want&nbsp;to&nbsp;replace&nbsp;the&nbsp;word&nbsp;with&nbsp;the&nbsp;correction&nbsp;or&nbsp;not.<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;test&nbsp;data&nbsp;with&nbsp;the&nbsp;unknown&nbsp;words&nbsp;either&nbsp;removed&nbsp;or&nbsp;replaced.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>save_ff_backprop_training_results_dynamic</strong></a>(weights, biases, extra)</dt><dd><tt>Saves&nbsp;the&nbsp;training&nbsp;results&nbsp;of&nbsp;the&nbsp;neural&nbsp;network&nbsp;into&nbsp;npy&nbsp;files</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>soft_clean_text</strong></a>(single_text)</dt><dd><tt>Splits&nbsp;the&nbsp;single_text&nbsp;into&nbsp;a&nbsp;single&nbsp;string&nbsp;of&nbsp;&nbsp;lowercase&nbsp;and&nbsp;stop_list&nbsp;removal,&nbsp;emojis&nbsp;and&nbsp;emoticons&nbsp;spaced.<br>
+          <strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;single_text&nbsp;:&nbsp;A&nbsp;single&nbsp;sentence&nbsp;(in&nbsp;this&nbsp;case,&nbsp;3&nbsp;concatenated).<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;cleaned_text&nbsp;:&nbsp;The&nbsp;text&nbsp;tokenized,&nbsp;lowercase&nbsp;and&nbsp;stop-list_removed.</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>split_data_set_balanced</strong></a>(data, data_labels, number_of_classes)</dt><dd><tt>Splits&nbsp;the&nbsp;data_set&nbsp;into&nbsp;train,&nbsp;val&nbsp;and&nbsp;test&nbsp;set&nbsp;keeping&nbsp;the&nbsp;equal&nbsp;class&nbsp;distribution.<br>
+          <strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;The&nbsp;data's&nbsp;conversations<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;data_labels:&nbsp;The&nbsp;data's&nbsp;labels<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;train_data:&nbsp;The&nbsp;training&nbsp;conversations<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;train_labels:&nbsp;The&nbsp;training&nbsp;labels<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;val_data:&nbsp;The&nbsp;validation&nbsp;conversations<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;val_labels:&nbsp;The&nbsp;validation&nbsp;labels<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;test_data:&nbsp;The&nbsp;test&nbsp;conversations<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;test_labels:&nbsp;The&nbsp;test&nbsp;labels</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+        <strong>train_ff_backprop_nn_dynamic</strong></a>(eta, n_epoch, train_features, train_labels, val_features, val_labels, num_of_classes, activation='relu', neurons_list=[50, 50])</dt><dd><tt>Train&nbsp;the&nbsp;neural&nbsp;network&nbsp;using&nbsp;the&nbsp;training&nbsp;and&nbsp;validation&nbsp;data&nbsp;(dynamic&nbsp;amount&nbsp;of&nbsp;hidden&nbsp;layers)&nbsp;0&nbsp;for&nbsp;Log_Reg.<br>
+          <strong><strong>Input:</strong></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;eta:&nbsp;The&nbsp;learning&nbsp;rate&nbsp;of&nbsp;the&nbsp;neural&nbsp;network.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;n_epoch:&nbsp;The&nbsp;number&nbsp;of&nbsp;epochs&nbsp;(repetitions).<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;train_features:&nbsp;the&nbsp;features&nbsp;of&nbsp;the&nbsp;training&nbsp;data.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;train_labels:&nbsp;the&nbsp;labels&nbsp;for&nbsp;the&nbsp;training&nbsp;data.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;val_features:&nbsp;the&nbsp;features&nbsp;of&nbsp;the&nbsp;validation&nbsp;data.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;val_labels:&nbsp;the&nbsp;labels&nbsp;of&nbsp;the&nbsp;validation&nbsp;data.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;num_of_classes:&nbsp;the&nbsp;number&nbsp;of&nbsp;classes&nbsp;in&nbsp;our&nbsp;set.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;activation:&nbsp;The&nbsp;activation&nbsp;function&nbsp;to&nbsp;use&nbsp;"sigmoid"&nbsp;or&nbsp;"relu".<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;neurons_list:&nbsp;The&nbsp;list&nbsp;of&nbsp;neurons.&nbsp;[]&nbsp;for&nbsp;Logistic&nbsp;Regressions<br>
+          <strong>Output:</strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;weights&nbsp;and&nbsp;bias&nbsp;weights&nbsp;lists(results&nbsp;of&nbsp;training).</tt></dd>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+<div class="function-box-model">
+  <div class="inner-box-function">
+    <div class="actual-function">
+      <p>
+      </p>  
+    </div>
+  </div>
+</div>
+</div>
+
+    
+    
+    <script>
+      var coll = document.getElementsByClassName("global-variable");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
