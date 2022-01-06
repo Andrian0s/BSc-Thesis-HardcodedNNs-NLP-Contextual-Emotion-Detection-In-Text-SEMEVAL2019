@@ -4,7 +4,7 @@ Bachelor Thesis of Andrianos Michail named Emotion Detection in Text using my ow
 
 Includes code in Python files, HTML Documentation and Report in PDF Format.
 
-The challenge in this thesis included building everything from scratch: Vectorizers, Preprocessing, Feed Forward Neuralnetworks and everything there was necessary to build an NLP Classification system.
+The challenge in this thesis included building everything from scratch: Vectorizers, Preprocessing, Feed Forward Neural Networks and everything that was necessary to build an NLP Classification system.
 
 Thus, the code is long and built into one file to accomodate time restrictions. The imports were limited to the absolutely necessary ones and building this code was a great challenge by itself.
 
